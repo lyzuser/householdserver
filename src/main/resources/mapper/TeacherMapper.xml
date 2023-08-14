@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.guet.householdserver.mapper.TeacherMapper">
+
+    <resultMap id="BaseResultMap" type="cn.edu.guet.householdserver.bean.Teacher">
+            <id property="teacherid" column="teacherId" jdbcType="VARCHAR"/>
+            <result property="departmentid" column="departmentid" jdbcType="VARCHAR"/>
+            <result property="teachername" column="teacherName" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="studentnum" column="studentNum" jdbcType="INTEGER"/>
+            <result property="surplusnum" column="surplusNum" jdbcType="INTEGER"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="VARCHAR"/>
+            <result property="info" column="info" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        teacherId,departmentid,teacherName,
+        password,studentNum,surplusNum,
+        title,content,status,
+        info,phone
+    </sql>
+    <select id="selectAllByTeacherId" resultType="cn.edu.guet.householdserver.bean.Teacher" parameterType="string">
+        SELECT * FROM teacher WHERE teacherid=#{id}
+    </select>
+</mapper>
