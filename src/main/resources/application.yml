@@ -13,4 +13,4 @@ mybatis:
 
 logging:
   level:
-    cn.edu.guet.insurance.mapper: DEBUG
+    cn.edu.guet.householdserver.mapper: DEBUG

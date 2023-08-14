@@ -14,7 +14,7 @@ import java.util.List;
 */
 @Mapper
 public interface TeacherMapper extends BaseMapper<Teacher> {
- List<Teacher> selectAllByTeacherId();
+ List<Teacher> selectAllByTeacherId(String teacherId);
 }
 
 

@@ -19,7 +19,7 @@ public class TeacherServiceImpl implements TeacherService{
 private TeacherMapper teacherMapper;
     @Override
     public List<Teacher> selectTeacherById(String teacher) {
-        return teacherMapper.selectAllByTeacherId();
+        return teacherMapper.selectAllByTeacherId(teacher);
     }
 }
 
